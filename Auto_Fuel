@@ -2,6 +2,9 @@
 IF :Generator<1 THEN :TGenRate=0.001 GOTO 1 END
 IF :Auto_Fuel<1 THEN :TGenRate=23 GOTO 1 ELSE :TGenRate=GP GOTO 1 END
 
+
+//  !V!Don't Copy This!V!
+//  This is just a reference.
 //:B1, & :B2. = Battery 1, & Battery 2.
 //Mx. = Max Battery Capacity
 //:MB1, & :MB2. = Max Battery Capacity 1, & Max Battery Capacity 2.
