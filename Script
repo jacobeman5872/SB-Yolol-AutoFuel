@@ -1,11 +1,10 @@
-:Battery_Total=:B1+B2 BT=:Battery_Total Mx=:MB1+:MB2 GP=1-BT/Mx
-IF :Generator<1 THEN TGenRate=0.001 GOTO 1 END
-IF :Auto_Fuel<1 THEN TGenRate=23 GOTO 1 ELSE TGenRate=GP GOTO 1 END
+:Battery_Total=:B1+:B2 Mx=:MB1+:MB2 GP=1-:Battery_Total/Mx
+IF :Generator<1 THEN :TGenRate=0.001 GOTO 1 END
+IF :Auto_Fuel<1 THEN :TGenRate=23 GOTO 1 ELSE :TGenRate=GP GOTO 1 END
 
-//B1, & B2. = Battery 1, & Battery 2.
-//BT. = Battery Total.
+//:B1, & :B2. = Battery 1, & Battery 2.
 //Mx. = Max Battery Capacity
-//MB1, & MB2. = Max Battery Capacity 1, & Max Battery Capacity 2.
+//:MB1, & :MB2. = Max Battery Capacity 1, & Max Battery Capacity 2.
 //GP. = Generator Percantage.
-//TGenRate. = Target Generator Rate.
-//:Generator, & Auto_Fuel. = Toggle Buttons
+//:TGenRate. = Target Generator Rate.
+//:Generator, & :Auto_Fuel. = Toggle Buttons
