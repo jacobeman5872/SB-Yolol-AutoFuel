@@ -1,0 +1,15 @@
+B=:MBP M=30000 :Power_Data=i+G+"/s"+o+P+"/s "+E+T 
+i="-Power In: " o="   -Power Out: " E="-EST. Time: " 
+
+G=:SUR*100 
+P=(B-:MBP)*3+G T=M/P+"s  " GOTO1 
+:Power_Data="Data Error. 404" GOTO2
+
+
+//  !V!Don't Copy This!V!
+//  This is just a reference.
+//  Power Output, and Estimated Runtime are estimates. They are not accurate.
+//B = :MBP = :StoredBatteryPower
+//M = Maximum Battery Power
+//G = :SUR *100 = :SocketUnitRate *100
+//P = (B-:MBP)* 3 +G = (B-:MBP)* #Number Of Batteries +G 
