@@ -1,8 +1,8 @@
-B=:MBP M=30000 :Power_Data=i+G+"/s"+o+P+"/s "+E+T 
-i="-Power In: " o="   -Power Out: " E="-EST. Time: " 
+B=:MBP M=60000 :Power_Data=i+G+"/s"+o+P+"/s "+E+T 
+i="-Power In: " o="   -Power Out: " E=" -EST. Time: " 
 
 
-G=:SUR*100 P=(B-:MBP)*3+G T=M/P+"s  " GOTO1 
+G=:SUR*100 P=(B-:MBP)*6+G T=:MBP/P+"s  " GOTO1 
 :Power_Data="Data Error. 404" GOTO2
 
 
@@ -12,4 +12,4 @@ G=:SUR*100 P=(B-:MBP)*3+G T=M/P+"s  " GOTO1
 //B = :MBP = :StoredBatteryPower
 //M = Maximum Battery Power
 //G = :SUR *100 = :SocketUnitRate *100
-//P = (B-:MBP)* 3 +G = (B-:MBP)* #Number Of Batteries +G 
+//P = (B-:MBP)* 6 +G = (B-:MBP)* #Number Of Batteries +G 
