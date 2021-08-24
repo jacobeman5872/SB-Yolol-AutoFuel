@@ -1,0 +1,5 @@
+IF :Scanner<1 THEN GOTO1 ELSE :PS_A=1 :PS_S=1 :PS_I=0 R=:PS_R END
+S="\n" :PS_A=0 :MPS="Found"+S :Scanner=0 F=R
+IF R>0 THEN :MPS+=:PS_M+": "+:PS_V+"kv " :PS_I++ R-- GOTO3 END 
+IF F>0 THEN :MPS-="Ore" F-- GOTO4 END GOTO1
+
