@@ -1,0 +1,11 @@
+IF :Scan<1 THEN GOTO1 END :MSR=1 :MSS=1 :MSI=0 :MPS="null"     
+IF :MSC<1 THEN GOTO1 END R=:MSC T=" Ore" G=" Crystal" :MPS="\n"
+IF R>0 THEN :MPS+=:MSM-T-G+": "+:MSV+"kv\n" R-- :MSI++ GOTO3 END      
+:Scan=0 GOTO1
+
+
+//  !V!Don't Copy This!V!
+//  This is just a reference.
+// :Scan = Button + Active
+// :MSI, :MSC, :MSM, :MSV, :MSS, :MSR. = Index, ScanResults, Material, Volume, Scan, Reset.
+// :MPS = Text Screen
