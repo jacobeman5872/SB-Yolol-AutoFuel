@@ -1,0 +1,11 @@
+Pp=(1-:B1/:MB1)*100 Gl=Pp/2*(Pp>10) :Battery=:B1+:B2+:B3+:B4+:B5+:B6
+F=(1-:Battery/60000)*100 :FcuMulti=100-(:Auto_Duck>0)*F 
+:TGenRate=.001+(Pp+Gl)*(:Generator>0)*(Pp>.1) GOTO1
+
+
+//  !V!Don't Copy This!V!
+//  This is just a reference.
+// Pp=(1- :B1 / :MB1 )*100 = Pp=(1- StoredBatteryPower / MaxBatteryPower )*100
+// Gl=Pp/2*(Pp>10) = When battery power drained is >10% (Pp>10), GenRate is increased by 33% (Pp+[Gl=Pp/2])
+// :Battery=:B1+:B2+:B3+:B4+:B5+:B6 = Total battery power
+// F=(1-:Battery/60000)*100 = F=(1- Total battery power / Total max battery power )*100
