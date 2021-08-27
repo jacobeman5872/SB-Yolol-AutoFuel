@@ -1,5 +1,5 @@
-IF :Scan<1 THEN GOTO1 END :MSR=1 :MSS=1 :MSI=0 :MPS="null"     
-IF :MSC<1 THEN GOTO1 END R=:MSC T=" Ore" G=" Crystal" :MPS="\n"
+IF :Scan<1 THEN GOTO1 END :MSR=1 :MSS=1 :MSI=0 :MPS="null" T=" Ore"
+IF :MSC<1 THEN GOTO1 END R=:MSC G=" Crystal" :MPS="Found\n"
 IF R>0 THEN :MPS+=:MSM-T-G+": "+:MSV+"kv\n" R-- :MSI++ GOTO3 END      
 :Scan=0 GOTO1
 
