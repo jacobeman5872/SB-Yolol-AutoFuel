@@ -1,0 +1,20 @@
+F="\n Rod " L="\n" N=":\n" P=" Prop"+N T=" Thrust"+N E=" EST. Time:"
+G=" Converter"+N S=" / " A=" PWR Rate"+N Z=1000 C=" Battery"+N O="%"
+J=100 R=:Rod1/:RodMax1*J+O R1=:Rod2/:RodMax2*J+O R2=:Rod3/:RodMax3*J+O
+:Fuel=F+1+N+R+F+2+N+R1+F+3+N+R2 Q=(:FI==0)*:P+:FI D="/s"
+:Odograph=L+P+:P/:PM*100+O+L+E+L+:P/Q/Z*Z+D H=L+G I=L+A
+:EMF=H+:Gnrtr/100*100+S+:GenRate/100*100+L+C+:B1/:MB1*J+O GOTO3
+GOTO20
+
+  // VARIABLES
+// F L N P T E G S A C O H I = String constants
+// Z J, R1-3 = Number constants, Fuel rod 
+
+  // INPUT
+// :Rod1-3, :RodMax1-3 = Fuel Rods, Fuel Rods' max
+// :FI, :P, :PM = Flow ID, Propellant, Propellant max
+// :Gnrtr, :GenRate = Current gen-rate, Max gen-rate
+// :B1, :MB1 = Battery, Battery Max
+
+  //OUTPUT
+// :Fuel :Odograph :EMF = Panel displays
