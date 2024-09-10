@@ -1,0 +1,16 @@
+O=" Ore" C=" Crystal"
+IF :Scan<1 THEN GOTO2 END :MSR=1 :MPS="Null"
+IF :Scan<1 THEN GOTO2 END :MSS=1 GOTO3+(:MSC>0)
+:Scan=0 :MPS="##"+:MSC R=:MSC 
+:MPS+="\n"+:MSM-O-C+"\n"+:MSV+" kv" :MSI++ R-- GOTO5-(R<=0)*3
+
+  // VARIABLES
+// O, C = Strings for subtraction
+// R = Results count
+
+  // INPUTS
+// :Scan = Dashboard button
+// :MS(a-z) = Material Point Scanner Fields
+
+  // OUTPUTS
+// :MPS = Display
