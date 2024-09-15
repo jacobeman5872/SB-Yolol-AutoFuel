@@ -1,0 +1,19 @@
+Pp=(1-:B1/:MB1)*100 L=:LMM*(:Idle+2)*25+Pp*(1+10*(Pp>1))
+:FcuMulti=110-:Eco*Pp :GenRate=L*((Pp>.1)*:EPS+:LMM>0) GOTO1
+GOTO20
+
+  // VARIABLES
+// Pp (Power %) = Battery empty percentage
+// L = (if IdleButton: 100) and (power percent * 10)
+// Gr = All generation rates added together
+
+  // INPUTS
+// :EPS = Power Button
+// :LMM = Idle Power Button
+// :Eco = Power Saving, FCU Button
+
+  // OUTPUTS
+// :FcuMulti = Flight Control Unit speed multiplier
+// :GenRate = Target generator rate
+
+
